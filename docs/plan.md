@@ -133,7 +133,7 @@ KITS/
 - [x] Alla HTML-filer skapade med gemensam grundstruktur (navbar, footer)
 - [x] `css/style.css` – CSS-variabler, reset, navbar, footer
 - [x] `js/main.js` – tema-växling med localStorage + dynamiskt årtal i footer
-- [ ] `js/admin.js` – tom fil med platshållarkommentar
+- [x] `js/admin.js` – tom fil med platshållarkommentar
 
 **Möte med Krille:** Genomgång av projektplan och förväntningar
 
