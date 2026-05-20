@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "namn": "AMD Ryzen 5 7600X",
+    "kategori": "Processor",
+    "pris": 2299,
+    "antal": 5,
+    "bild": ""
+  },
+  {
+    "id": 2,
+    "namn": "NVIDIA GeForce RTX 4060",
+    "kategori": "Grafikkort",
+    "pris": 3999,
+    "antal": 3,
+    "bild": ""
+  },
+  {
+    "id": 3,
+    "namn": "Kingston Fury Beast 32GB DDR5",
+    "kategori": "RAM",
+    "pris": 1199,
+    "antal": 8,
+    "bild": ""
+  },
+  {
+    "id": 4,
+    "namn": "Samsung 990 Pro 1TB NVMe",
+    "kategori": "Lagring",
+    "pris": 1499,
+    "antal": 6,
+    "bild": ""
+  },
+  {
+    "id": 5,
+    "namn": "Corsair RM850x 850W",
+    "kategori": "Nätaggregat",
+    "pris": 1349,
+    "antal": 4,
+    "bild": ""
+  }
+]
