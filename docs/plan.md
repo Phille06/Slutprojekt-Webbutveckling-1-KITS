@@ -128,7 +128,7 @@ KITS/
 - [x] `package.json` skapad och beroenden installerade (`express`, `dotenv`, `bcryptjs`, `jsonwebtoken`)
 - [x] `.gitignore` skapad (ignorerar `node_modules/` och `.env`)
 - [x] `server.js` – minimal Express-server som servar `src/` på port 3000
-- [ ] `.env.example` skapad med mallvariabler
+- [x] `.env.example` skapad med mallvariabler
 - [ ] `data/produkter.json` skapad med exempelprodukter
 - [ ] Alla HTML-filer skapade med gemensam grundstruktur (navbar, footer)
 - [ ] `css/style.css` – CSS-variabler, reset, navbar, footer
