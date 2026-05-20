@@ -72,7 +72,10 @@ KITS/
 ├── .gitignore              # Ignorerar .env och node_modules
 ├── package.json
 ├── data/
-│   └── produkter.json      # Produktdata (tillfällig "databas")
+│   ├── produkter.json      # Produktdata (tillfällig "databas")
+│   ├── oppettider.json     # Öppettider (redigerbara via admin)
+│   ├── tjanster.json       # Reparations-/felsökningstyper (redigerbara via admin)
+│   └── bokningar.json      # Inkomna bokningar från bokningsformuläret
 └── src/
     ├── index.html
     ├── om-oss.html
@@ -146,11 +149,16 @@ KITS/
 - [ ] Flexbox-baserade bildgallerier implementerade
 - [ ] Responsiv layout med media queries klar
 - [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
+- [ ] Aktiv sida i navbar anpassas korrekt för ljust och mörkt läge (feedback från Krille)
 - [ ] Bokningsformuläret är färdigbyggt
 - [ ] Express-server körs lokalt med REST API för produkter
 - [ ] JWT-baserad inloggning till adminpanelen fungerar
 - [ ] Admin kan lägga till, redigera och ta bort produkter via adminpanelen
 - [ ] Produktdata läses från och skrivs till `data/produkter.json`
+- [ ] Admin kan ange och redigera öppettider (sparas i `data/oppettider.json`) (feedback från Krille)
+- [ ] Admin kan lägga till, redigera och ta bort reparations-/felsökningstyper (sparas i `data/tjanster.json`) (feedback från Krille)
+- [ ] Admin kan se inkomna bokningar från bokningsformuläret (sparas i `data/bokningar.json`) (feedback från Krille)
+- [ ] Bokningsformuläret skickar data till `POST /api/bokningar` som sparar till `data/bokningar.json`
 
 **Möte med Krille:** Genomgång av design och innehåll, feedback inhämtas
 
@@ -188,11 +196,19 @@ KITS/
 ### 3️⃣ Backend & API (Node.js / Express)
 - Sätta upp `server.js` med Express och statisk filservering av `src/`
 - Skapa REST API-routes:
+  - `POST /api/login` – autentisera admin, returnera JWT
   - `GET /api/produkter` – hämta alla produkter
   - `POST /api/produkter` – lägg till produkt (kräver auth)
   - `PUT /api/produkter/:id` – uppdatera produkt (kräver auth)
   - `DELETE /api/produkter/:id` – ta bort produkt (kräver auth)
-  - `POST /api/login` – autentisera admin, returnera JWT
+  - `GET /api/oppettider` – hämta öppettider
+  - `PUT /api/oppettider` – uppdatera öppettider (kräver auth)
+  - `GET /api/tjanster` – hämta reparations-/felsökningstyper
+  - `POST /api/tjanster` – lägg till tjänstetyp (kräver auth)
+  - `PUT /api/tjanster/:id` – uppdatera tjänstetyp (kräver auth)
+  - `DELETE /api/tjanster/:id` – ta bort tjänstetyp (kräver auth)
+  - `POST /api/bokningar` – ta emot bokning från formulär, spara till JSON
+  - `GET /api/bokningar` – hämta alla bokningar (kräver auth)
 - Läsa inloggningsuppgifter från `.env` med `dotenv`
 - Lösenord lagras bcrypt-hashade i `.env`
 - JWT-token används för att skydda admin-routes
