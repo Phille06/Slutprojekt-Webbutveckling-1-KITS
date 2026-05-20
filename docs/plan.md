@@ -124,10 +124,16 @@ KITS/
 ### Milstolpe 1 – Projektplan & Grundstruktur
 **Datum:** Vecka 1
 
-- Projektplan klar och godkänd
-- Mappstruktur och tomma HTML-filer skapade
-- Gemensam navbar och footer implementerad
-- Grundläggande CSS-variabler och färgtema satt upp
+- [x] Projektplan klar och godkänd
+- [x] `package.json` skapad och beroenden installerade (`express`, `dotenv`, `bcryptjs`, `jsonwebtoken`)
+- [x] `.gitignore` skapad (ignorerar `node_modules/` och `.env`)
+- [ ] `server.js` – minimal Express-server som servar `src/` på port 3000
+- [ ] `.env.example` skapad med mallvariabler
+- [ ] `data/produkter.json` skapad med exempelprodukter
+- [ ] Alla HTML-filer skapade med gemensam grundstruktur (navbar, footer)
+- [ ] `css/style.css` – CSS-variabler, reset, navbar, footer
+- [ ] `js/main.js` – tema-växling med localStorage + dynamiskt årtal i footer
+- [ ] `js/admin.js` – tom fil med platshållarkommentar
 
 **Möte med Krille:** Genomgång av projektplan och förväntningar
 
@@ -136,29 +142,29 @@ KITS/
 ### Milstolpe 2 – Backend, Innehåll & Layout
 **Datum:** Vecka 2–3
 
-- Alla sidor har innehåll (text, bilder, listor)
-- Flexbox-baserade bildgallerier implementerade
-- Responsiv layout med media queries klar
-- Ljust/mörkt läge fungerar och sparas i `localStorage`
-- Bokningsformuläret är färdigbyggt
-- Express-server körs lokalt med REST API för produkter
-- JWT-baserad inloggning till adminpanelen fungerar
-- Admin kan lägga till, redigera och ta bort produkter via adminpanelen
-- Produktdata läses från och skrivs till `data/produkter.json`
+- [ ] Alla sidor har innehåll (text, bilder, listor)
+- [ ] Flexbox-baserade bildgallerier implementerade
+- [ ] Responsiv layout med media queries klar
+- [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
+- [ ] Bokningsformuläret är färdigbyggt
+- [ ] Express-server körs lokalt med REST API för produkter
+- [ ] JWT-baserad inloggning till adminpanelen fungerar
+- [ ] Admin kan lägga till, redigera och ta bort produkter via adminpanelen
+- [ ] Produktdata läses från och skrivs till `data/produkter.json`
 
 **Möte med Krille:** Genomgång av design och innehåll, feedback inhämtas
 
 ---
 
 ### Milstolpe 3 – Testning, Optimering & Publicering
-**Datum:** Vecka 4 (klart senast 17 maj)**
+**Datum:** Vecka 4 (klart senast 17 maj)
 
-- Webbplatsen testad i flera webbläsare och på mobil
-- Tillgänglighetstester genomförda (Lighthouse + manuellt)
-- Bilder optimerade för webben
-- HTML och CSS validerade
-- Dokumentation och utvärdering klar
-- Publicerad på GitHub med MIT-licens
+- [ ] Webbplatsen testad i flera webbläsare och på mobil
+- [ ] Tillgänglighetstester genomförda (Lighthouse + manuellt)
+- [ ] Bilder optimerade för webben
+- [ ] HTML och CSS validerade
+- [ ] Dokumentation och utvärdering klar
+- [ ] Publicerad på GitHub med MIT-licens
 
 **Möte med Krille:** Slutredovisning och leverans
 
