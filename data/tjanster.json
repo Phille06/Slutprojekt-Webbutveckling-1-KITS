@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "namn": "Datordiagnos",
+    "beskrivning": "Fullständig genomgång av hårdvara och mjukvara för att identifiera fel.",
+    "pris": 299
+  },
+  {
+    "id": 2,
+    "namn": "Virusborttagning",
+    "beskrivning": "Rensning av virus, skadlig programvara och spionprogram.",
+    "pris": 499
+  },
+  {
+    "id": 3,
+    "namn": "OS-installation",
+    "beskrivning": "Ren installation av Windows eller Linux med drivrutiner.",
+    "pris": 599
+  },
+  {
+    "id": 4,
+    "namn": "Hårdvaruuppgradering",
+    "beskrivning": "Byte eller tillägg av RAM, SSD, grafikkort eller annan komponent.",
+    "pris": 199
+  },
+  {
+    "id": 5,
+    "namn": "Nätverksfelsökning",
+    "beskrivning": "Felsökning och optimering av hem- eller kontorsnätverk.",
+    "pris": 399
+  }
+]
