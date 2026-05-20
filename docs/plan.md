@@ -131,7 +131,7 @@ KITS/
 - [x] `.env.example` skapad med mallvariabler
 - [x] `data/produkter.json` skapad med exempelprodukter
 - [x] Alla HTML-filer skapade med gemensam grundstruktur (navbar, footer)
-- [ ] `css/style.css` – CSS-variabler, reset, navbar, footer
+- [x] `css/style.css` – CSS-variabler, reset, navbar, footer
 - [ ] `js/main.js` – tema-växling med localStorage + dynamiskt årtal i footer
 - [ ] `js/admin.js` – tom fil med platshållarkommentar
 
