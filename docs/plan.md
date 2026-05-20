@@ -130,7 +130,7 @@ KITS/
 - [x] `server.js` – minimal Express-server som servar `src/` på port 3000
 - [x] `.env.example` skapad med mallvariabler
 - [x] `data/produkter.json` skapad med exempelprodukter
-- [ ] Alla HTML-filer skapade med gemensam grundstruktur (navbar, footer)
+- [x] Alla HTML-filer skapade med gemensam grundstruktur (navbar, footer)
 - [ ] `css/style.css` – CSS-variabler, reset, navbar, footer
 - [ ] `js/main.js` – tema-växling med localStorage + dynamiskt årtal i footer
 - [ ] `js/admin.js` – tom fil med platshållarkommentar
