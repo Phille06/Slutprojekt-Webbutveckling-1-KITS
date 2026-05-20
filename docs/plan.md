@@ -151,14 +151,14 @@ KITS/
 - [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
 - [ ] Aktiv sida i navbar anpassas korrekt för ljust och mörkt läge (feedback från Krille)
 - [ ] Bokningsformuläret är färdigbyggt
-- [ ] Express-server körs lokalt med REST API för produkter
-- [ ] JWT-baserad inloggning till adminpanelen fungerar
+- [x] Express-server körs lokalt med REST API för produkter
+- [x] JWT-baserad inloggning till adminpanelen fungerar
 - [ ] Admin kan lägga till, redigera och ta bort produkter via adminpanelen
-- [ ] Produktdata läses från och skrivs till `data/produkter.json`
-- [ ] Admin kan ange och redigera öppettider (sparas i `data/oppettider.json`) (feedback från Krille)
+- [x] Produktdata läses från och skrivs till `data/produkter.json`
+- [x] Admin kan ange och redigera öppettider (sparas i `data/oppettider.json`) (feedback från Krille)
 - [ ] Admin kan lägga till, redigera och ta bort reparations-/felsökningstyper (sparas i `data/tjanster.json`) (feedback från Krille)
 - [ ] Admin kan se inkomna bokningar från bokningsformuläret (sparas i `data/bokningar.json`) (feedback från Krille)
-- [ ] Bokningsformuläret skickar data till `POST /api/bokningar` som sparar till `data/bokningar.json`
+- [x] Bokningsformuläret skickar data till `POST /api/bokningar` som sparar till `data/bokningar.json`
 
 **Möte med Krille:** Genomgång av design och innehåll, feedback inhämtas
 
