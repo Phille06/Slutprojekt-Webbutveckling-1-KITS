@@ -138,7 +138,7 @@ KITS/
 - [x] `js/main.js` – tema-växling med localStorage + dynamiskt årtal i footer
 - [x] `js/admin.js` – tom fil med platshållarkommentar
 
-**Möte med Krille:** Genomgång av projektplan och förväntningar
+**Möte med Krille:** Genomgång av projektplan och förväntningar, feedback inhämtas
 
 ---
 
