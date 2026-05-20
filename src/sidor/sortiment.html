@@ -26,7 +26,14 @@
 
   <main>
     <h1>Sortiment &amp; Lager</h1>
-    <p>Här visas tillgängliga datorkomponenter och produkter.</p>
+    <p class="intro-text">
+      Här hittar du vårt aktuella lager av datorkomponenter och elektronik.
+      Alla priser är i SEK inklusive moms. Kontakta oss om du letar efter något som inte finns listat.
+    </p>
+
+    <div id="produktGrid" class="produkt-grid">
+      <p>Laddar produkter...</p>
+    </div>
   </main>
 
   <footer>
@@ -34,5 +41,33 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    fetch('/api/produkter')
+      .then(r => r.json())
+      .then(produkter => {
+        const grid = document.getElementById('produktGrid');
+        if (produkter.length === 0) {
+          grid.innerHTML = '<p>Inga produkter i lager just nu.</p>';
+          return;
+        }
+        grid.innerHTML = produkter.map(p => `
+          <article class="produkt-kort">
+            ${p.bild ? `<img src="${p.bild}" alt="${p.namn}" class="produkt-bild" />` : ''}
+            <div class="produkt-info">
+              <span class="produkt-kategori">${p.kategori}</span>
+              <h3>${p.namn}</h3>
+              <p class="produkt-pris">${p.pris.toLocaleString('sv-SE')} kr</p>
+              <p class="produkt-antal ${p.antal > 0 ? 'i-lager' : 'slut'}">
+                ${p.antal > 0 ? `${p.antal} i lager` : 'Tillfälligt slut'}
+              </p>
+            </div>
+          </article>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('produktGrid').innerHTML =
+          '<p>Kunde inte hämta produkter. Försök igen senare.</p>';
+      });
+  </script>
 </body>
 </html>

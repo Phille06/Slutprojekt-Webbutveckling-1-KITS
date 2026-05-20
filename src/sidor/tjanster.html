@@ -25,8 +25,21 @@
   </header>
 
   <main>
-    <h1>Tjänster</h1>
-    <p>Här beskrivs reparationer, felsökningar och optimeringstjänster.</p>
+    <h1>Reparationer &amp; Tjänster</h1>
+    <p class="intro-text">
+      Vi erbjuder ett brett utbud av IT-tjänster till fast pris. Ingen timdebitering –
+      du vet vad det kostar innan vi sätter igång. Vid hemservice tillkommer en reseavgift på 99 kr.
+    </p>
+
+    <div id="tjansterGrid" class="tjanster-grid">
+      <p>Laddar tjänster...</p>
+    </div>
+
+    <section class="tjanst-cta">
+      <h2>Behöver du hjälp hemma?</h2>
+      <p>Vi kan även komma hem till dig. Boka ett hembesök så ordnar vi det!</p>
+      <a href="../boka.html" class="btn-primary">Boka hemservice</a>
+    </section>
   </main>
 
   <footer>
@@ -34,5 +47,27 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    fetch('/api/tjanster')
+      .then(r => r.json())
+      .then(tjanster => {
+        const grid = document.getElementById('tjansterGrid');
+        if (tjanster.length === 0) {
+          grid.innerHTML = '<p>Inga tjänster listade just nu.</p>';
+          return;
+        }
+        grid.innerHTML = tjanster.map(t => `
+          <article class="tjanst-kort">
+            <h3>${t.namn}</h3>
+            <p>${t.beskrivning}</p>
+            <p class="tjanst-pris">Fast pris: ${t.pris.toLocaleString('sv-SE')} kr</p>
+          </article>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('tjansterGrid').innerHTML =
+          '<p>Kunde inte hämta tjänster. Försök igen senare.</p>';
+      });
+  </script>
 </body>
 </html>

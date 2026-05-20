@@ -145,7 +145,7 @@ KITS/
 ### Milstolpe 2 – Backend, Innehåll & Layout
 **Datum:** Vecka 2–3
 
-- [ ] Alla sidor har innehåll (text, bilder, listor)
+- [x] Alla sidor har innehåll (text, bilder, listor)
 - [ ] Flexbox-baserade bildgallerier implementerade
 - [ ] Responsiv layout med media queries klar
 - [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
