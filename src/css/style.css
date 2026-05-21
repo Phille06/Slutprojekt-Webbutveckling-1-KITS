@@ -472,4 +472,61 @@ body.dark .felmeddelande {
   .theme-toggle {
     order: 2;
   }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+
+  .hero {
+    padding: 2.5rem 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .kort-grid {
+    flex-direction: column;
+  }
+
+  .produkt-kort {
+    max-width: 100%;
+  }
+
+  .boka-formulär {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 1rem;
+    margin: 1.25rem auto;
+  }
+
+  .produkt-grid,
+  .tjanster-grid,
+  .kort-grid {
+    gap: 1rem;
+  }
+
+  .produkt-kort,
+  .tjanst-kort,
+  .kort {
+    flex: 1 1 100%;
+  }
+
+  .kontakt-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .btn-primary {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
 }

@@ -147,7 +147,7 @@ KITS/
 
 - [x] Alla sidor har innehåll (text, bilder, listor)
 - [x] Flexbox-baserade bildgallerier implementerade
-- [ ] Responsiv layout med media queries klar
+- [x] Responsiv layout med media queries klar
 - [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
 - [ ] Aktiv sida i navbar anpassas korrekt för ljust och mörkt läge (feedback från Krille)
 - [x] Bokningsformuläret är färdigbyggt
