@@ -146,7 +146,7 @@ KITS/
 **Datum:** Vecka 2–3
 
 - [x] Alla sidor har innehåll (text, bilder, listor)
-- [ ] Flexbox-baserade bildgallerier implementerade
+- [x] Flexbox-baserade bildgallerier implementerade
 - [ ] Responsiv layout med media queries klar
 - [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
 - [ ] Aktiv sida i navbar anpassas korrekt för ljust och mörkt läge (feedback från Krille)

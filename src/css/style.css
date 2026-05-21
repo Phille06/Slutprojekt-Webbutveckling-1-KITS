@@ -186,6 +186,172 @@ footer {
   color: var(--color-text-muted);
 }
 
+.kort-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.kort {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 260px;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.kort h3 {
+  color: var(--color-primary);
+}
+
+.kort p {
+  color: var(--color-text-sec);
+  flex: 1;
+}
+
+.kort-om {
+  margin-bottom: 2.5rem;
+}
+
+.snabblänkar {
+  margin-bottom: 2.5rem;
+}
+
+.produkt-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.produkt-kort {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 220px;
+  max-width: 280px;
+  overflow: hidden;
+}
+
+.produkt-bild {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.produkt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem;
+}
+
+.produkt-kategori {
+  background-color: var(--color-subtle);
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.produkt-pris {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.produkt-antal {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.produkt-antal.i-lager  { color: var(--color-success); }
+.produkt-antal.slut     { color: var(--color-error); }
+
+.tjanster-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.tjanst-kort {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 280px;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.tjanst-kort h3 {
+  color: var(--color-text);
+}
+
+.tjanst-kort p {
+  color: var(--color-text-sec);
+  flex: 1;
+}
+
+.tjanst-pris {
+  color: var(--color-primary) !important;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.kontakt-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.kontakt-info,
+.oppettider-sektion {
+  flex: 1 1 260px;
+}
+
+.kontakt-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.kontakt-lista li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.oppettider-tabell {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.oppettider-tabell td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-sec);
+}
+
+.oppettider-tabell td:first-child {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .form-grupp {
   display: flex;
   flex-direction: column;
