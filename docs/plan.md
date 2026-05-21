@@ -148,8 +148,8 @@ KITS/
 - [x] Alla sidor har innehåll (text, bilder, listor)
 - [x] Flexbox-baserade bildgallerier implementerade
 - [x] Responsiv layout med media queries klar
-- [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
-- [ ] Aktiv sida i navbar anpassas korrekt för ljust och mörkt läge (feedback från Krille)
+- [x] Ljust/mörkt läge fungerar och sparas i `localStorage`
+- [x] Aktiv sida i navbar anpassas korrekt för ljust och mörkt läge (feedback från Krille)
 - [x] Bokningsformuläret är färdigbyggt
 - [x] Express-server körs lokalt med REST API för produkter
 - [x] JWT-baserad inloggning till adminpanelen fungerar
