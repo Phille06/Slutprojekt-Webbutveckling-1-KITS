@@ -186,6 +186,95 @@ footer {
   color: var(--color-text-muted);
 }
 
+.form-grupp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-grupp label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.form-grupp input,
+.form-grupp textarea {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.85rem;
+  transition: border-color var(--transition);
+  width: 100%;
+}
+
+.form-grupp input:focus,
+.form-grupp textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.form-grupp textarea {
+  resize: vertical;
+}
+
+.boka-formulär {
+  max-width: 640px;
+}
+
+.bekraftelse {
+  background-color: #dcfce7;
+  border: 1px solid var(--color-success);
+  border-radius: var(--radius);
+  color: #166534;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+}
+
+body.dark .bekraftelse {
+  background-color: #052e16;
+  color: #86efac;
+}
+
+.felmeddelande {
+  background-color: #fee2e2;
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius);
+  color: #991b1b;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+}
+
+body.dark .felmeddelande {
+  background-color: #2d0a0a;
+  color: #fca5a5;
+}
+
+.intro-text {
+  color: var(--color-text-sec);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  max-width: 720px;
+}
+
+.lista {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.boka-info,
+.om-sektion,
+.tjanst-cta {
+  margin-bottom: 2.5rem;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;

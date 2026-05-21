@@ -150,7 +150,7 @@ KITS/
 - [ ] Responsiv layout med media queries klar
 - [ ] Ljust/mörkt läge fungerar och sparas i `localStorage`
 - [ ] Aktiv sida i navbar anpassas korrekt för ljust och mörkt läge (feedback från Krille)
-- [ ] Bokningsformuläret är färdigbyggt
+- [x] Bokningsformuläret är färdigbyggt
 - [x] Express-server körs lokalt med REST API för produkter
 - [x] JWT-baserad inloggning till adminpanelen fungerar
 - [ ] Admin kan lägga till, redigera och ta bort produkter via adminpanelen

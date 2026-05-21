@@ -43,7 +43,53 @@
 
     <section class="boka-formulär">
       <h2>Bokningsformulär</h2>
-      <p><em>Formuläret byggs i nästa steg.</em></p>
+
+      <div id="bekraftelse" class="bekraftelse" hidden>
+        <p>&#10003; Tack! Din bokning är mottagen. Vi hör av oss inom 24 timmar.</p>
+      </div>
+
+      <div id="felmeddelande" class="felmeddelande" hidden>
+        <p>&#10007; Något gick fel. Försök igen eller ring oss på 070-123 45 67.</p>
+      </div>
+
+      <form id="bokningsFormulär" novalidate>
+        <div class="form-grupp">
+          <label for="namn">Namn <span aria-hidden="true">*</span></label>
+          <input type="text" id="namn" name="namn" required autocomplete="name"
+                 placeholder="För- och efternamn" />
+        </div>
+
+        <div class="form-grupp">
+          <label for="telefon">Telefon <span aria-hidden="true">*</span></label>
+          <input type="tel" id="telefon" name="telefon" required autocomplete="tel"
+                 placeholder="070-000 00 00" />
+        </div>
+
+        <div class="form-grupp">
+          <label for="epost">E-post <span aria-hidden="true">*</span></label>
+          <input type="email" id="epost" name="epost" required autocomplete="email"
+                 placeholder="din@epost.se" />
+        </div>
+
+        <div class="form-grupp">
+          <label for="adress">Adress <span aria-hidden="true">*</span></label>
+          <input type="text" id="adress" name="adress" required autocomplete="street-address"
+                 placeholder="Gatuadress, postnummer och ort" />
+        </div>
+
+        <div class="form-grupp">
+          <label for="datum">Önskat datum <span aria-hidden="true">*</span></label>
+          <input type="date" id="datum" name="datum" required />
+        </div>
+
+        <div class="form-grupp">
+          <label for="arende">Beskriv ditt ärende <span aria-hidden="true">*</span></label>
+          <textarea id="arende" name="arende" required rows="5"
+                    placeholder="Beskriv problemet eller vad du behöver hjälp med..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" id="skickaKnapp">Skicka bokning</button>
+      </form>
     </section>
   </main>
 
@@ -52,5 +98,52 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Sätt minsta tillåtna datum till imorgon
+    const datumInput = document.getElementById('datum');
+    const imorgon = new Date();
+    imorgon.setDate(imorgon.getDate() + 1);
+    datumInput.min = imorgon.toISOString().split('T')[0];
+
+    document.getElementById('bokningsFormulär').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const knapp = document.getElementById('skickaKnapp');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      knapp.disabled = true;
+      knapp.textContent = 'Skickar...';
+
+      const data = {
+        namn:    form.namn.value.trim(),
+        telefon: form.telefon.value.trim(),
+        epost:   form.epost.value.trim(),
+        adress:  form.adress.value.trim(),
+        datum:   form.datum.value,
+        arende:  form.arende.value.trim()
+      };
+
+      try {
+        const svar = await fetch('/api/bokningar', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (!svar.ok) throw new Error();
+
+        form.hidden = true;
+        document.getElementById('bekraftelse').hidden = false;
+      } catch {
+        document.getElementById('felmeddelande').hidden = false;
+        knapp.disabled = false;
+        knapp.textContent = 'Skicka bokning';
+      }
+    });
+  </script>
 </body>
 </html>
