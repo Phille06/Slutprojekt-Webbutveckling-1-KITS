@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": 1,
+    "skapad": "2026-05-21T08:26:23.462Z",
+    "namn": "Philip Nordlund Fällman",
+    "telefon": "5357542453",
+    "epost": "philip.nordlundfallman@realgymnasiet.se",
+    "adress": "Dimgatan 25D",
+    "datum": "2044-04-15",
+    "arende": "IT PC"
+  }
+]

@@ -19,20 +19,131 @@
         <li><a href="boka.html">Boka hemservice</a></li>
         <li><a href="om-oss.html">Om oss</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Växla tema">&#9790;</button>
     </nav>
   </header>
-
   <main>
-    <h1>Adminpanel</h1>
-    <p>Logga in för att hantera produkter.</p>
+    <section id="loginSektion">
+      <h1>Adminpanel</h1>
+      <p class="intro-text">Logga in för att hantera butikens innehåll.</p>
+      <div id="loginFel" class="felmeddelande" hidden></div>
+      <form id="loginFormulär" class="boka-formulär" novalidate>
+        <div class="form-grupp">
+          <label for="loginAnvändare">Användarnamn</label>
+          <input type="text" id="loginAnvändare" required autocomplete="username" />
+        </div>
+        <div class="form-grupp">
+          <label for="loginLösenord">Lösenord</label>
+          <input type="password" id="loginLösenord" required autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn-primary">Logga in</button>
+      </form>
+    </section>
+    <section id="adminDashboard" hidden>
+      <div class="admin-header">
+        <h1>Adminpanel</h1>
+        <button id="logoutKnapp" class="btn-sekundär">Logga ut</button>
+      </div>
+      <div class="admin-flikar">
+        <button class="flik active" data-flik="produkter">Produkter</button>
+        <button class="flik" data-flik="tjanster">Tjänster</button>
+        <button class="flik" data-flik="oppettider">Öppettider</button>
+        <button class="flik" data-flik="bokningar">Bokningar</button>
+      </div>
+      <div id="flik-produkter" class="flik-innehall">
+        <div class="admin-sektion-header">
+          <h2>Produkter</h2>
+          <button class="btn-primary" id="visaProduktFormulär">+ Lägg till</button>
+        </div>
+        <form id="produktFormulär" class="admin-formulär" hidden>
+          <h3 id="produktFormulärRubrik">Ny produkt</h3>
+          <input type="hidden" id="produktId" />
+          <div class="admin-form-rad">
+            <div class="form-grupp">
+              <label for="produktNamn">Namn</label>
+              <input type="text" id="produktNamn" required />
+            </div>
+            <div class="form-grupp">
+              <label for="produktKategori">Kategori</label>
+              <input type="text" id="produktKategori" required />
+            </div>
+          </div>
+          <div class="admin-form-rad">
+            <div class="form-grupp">
+              <label for="produktPris">Pris (kr)</label>
+              <input type="number" id="produktPris" min="0" required />
+            </div>
+            <div class="form-grupp">
+              <label for="produktAntal">Antal i lager</label>
+              <input type="number" id="produktAntal" min="0" required />
+            </div>
+          </div>
+          <div class="form-grupp">
+            <label for="produktBild">Bild-URL</label>
+            <input type="text" id="produktBild" placeholder="https://..." />
+          </div>
+          <div class="form-knappar">
+            <button type="submit" class="btn-primary" id="sparaProdukt">Spara</button>
+            <button type="button" class="btn-sekundär" id="avbrytProdukt">Avbryt</button>
+          </div>
+        </form>
+        <div id="produktFel" class="felmeddelande" hidden></div>
+        <div id="produkter-lista" class="admin-tabell-wrapper">
+          <p>Laddar produkter...</p>
+        </div>
+      </div>
+      <div id="flik-tjanster" class="flik-innehall" hidden>
+        <div class="admin-sektion-header">
+          <h2>Tjänster</h2>
+          <button class="btn-primary" id="visaTjanstFormulär">+ Lägg till</button>
+        </div>
+        <form id="tjanstFormulär" class="admin-formulär" hidden>
+          <h3 id="tjanstFormulärRubrik">Ny tjänst</h3>
+          <input type="hidden" id="tjanstId" />
+          <div class="form-grupp">
+            <label for="tjanstNamn">Namn</label>
+            <input type="text" id="tjanstNamn" required />
+          </div>
+          <div class="form-grupp">
+            <label for="tjanstBeskrivning">Beskrivning</label>
+            <textarea id="tjanstBeskrivning" rows="3" required></textarea>
+          </div>
+          <div class="form-grupp">
+            <label for="tjanstPris">Fast pris (kr)</label>
+            <input type="number" id="tjanstPris" min="0" required />
+          </div>
+          <div class="form-knappar">
+            <button type="submit" class="btn-primary">Spara</button>
+            <button type="button" class="btn-sekundär" id="avbrytTjanst">Avbryt</button>
+          </div>
+        </form>
+        <div id="tjanstFel" class="felmeddelande" hidden></div>
+        <div id="tjanster-lista" class="admin-tabell-wrapper">
+          <p>Laddar tjänster...</p>
+        </div>
+      </div>
+      <div id="flik-oppettider" class="flik-innehall" hidden>
+        <h2>Öppettider</h2>
+        <form id="oppettiderFormulär" class="admin-formulär">
+          <div id="oppettider-fält"></div>
+          <div id="oppettiderFel" class="felmeddelande" hidden></div>
+          <div id="oppettiderOk" class="bekraftelse" hidden><p>&#10003; Öppettider sparade.</p></div>
+          <button type="submit" class="btn-primary">Spara öppettider</button>
+        </form>
+      </div>
+      <div id="flik-bokningar" class="flik-innehall" hidden>
+        <h2>Inkomna bokningar</h2>
+        <div id="bokningar-lista" class="admin-tabell-wrapper">
+          <p>Laddar bokningar...</p>
+        </div>
+      </div>
+    </section>
   </main>
-
   <footer>
     <p>&copy; <span id="year"></span> Krilles IT Shop &ndash; Teknikgatan 12, 123 45 Teknikstad &ndash; info@kits.se</p>
   </footer>
-
   <script src="js/main.js"></script>
   <script src="js/admin.js"></script>
 </body>

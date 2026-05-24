@@ -153,11 +153,11 @@ KITS/
 - [x] Bokningsformuläret är färdigbyggt
 - [x] Express-server körs lokalt med REST API för produkter
 - [x] JWT-baserad inloggning till adminpanelen fungerar
-- [ ] Admin kan lägga till, redigera och ta bort produkter via adminpanelen
+- [x] Admin kan lägga till, redigera och ta bort produkter via adminpanelen
 - [x] Produktdata läses från och skrivs till `data/produkter.json`
 - [x] Admin kan ange och redigera öppettider (sparas i `data/oppettider.json`) (feedback från Krille)
-- [ ] Admin kan lägga till, redigera och ta bort reparations-/felsökningstyper (sparas i `data/tjanster.json`) (feedback från Krille)
-- [ ] Admin kan se inkomna bokningar från bokningsformuläret (sparas i `data/bokningar.json`) (feedback från Krille)
+- [x] Admin kan lägga till, redigera och ta bort reparations-/felsökningstyper (sparas i `data/tjanster.json`) (feedback från Krille)
+- [x] Admin kan se inkomna bokningar från bokningsformuläret (sparas i `data/bokningar.json`) (feedback från Krille)
 - [x] Bokningsformuläret skickar data till `POST /api/bokningar` som sparar till `data/bokningar.json`
 
 **Möte med Krille:** Genomgång av design och innehåll, feedback inhämtas
